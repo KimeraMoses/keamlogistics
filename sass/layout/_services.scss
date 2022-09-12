@@ -1,0 +1,140 @@
+.services {
+  background-color: $color-grey-light-2;
+  // margin: -1rem auto;
+  position: relative;
+  display: flex;
+  // width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  @include respond(tab-port) {
+    max-width: 900px;
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 30rem;
+    // width: 100%;
+
+    @include respond(tab-port) {
+      position: relative;
+      transform: none;
+      width: 40rem;
+      top: 0;
+      left: 0;
+      transform: translateX(28rem);
+    }
+    @include respond(phone) {
+      transform: translateX(12rem);
+    }
+  }
+  &__container {
+    display: flex;
+    margin: 0 5rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-primary;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__icon-container {
+    position: relative;
+    // margin-bottom: 5rem;
+    background-color: $color-primary-light;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  &__img {
+    // height: 30rem;
+    width: 100%;
+  }
+  &__img-container {
+    width: 50%;
+    @include respond(tab-port) {
+      max-width: 900px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+  &__all {
+    margin: 12rem auto;
+    width: 88%;
+    @include respond(tab-port) {
+      margin-top: 5rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    // max-width: 50rem;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    margin-top: 5rem;
+    @include respond(tab-port) {
+      margin-top: 30rem;
+      // position: absolute;
+      // top: 6%;
+    }
+    @include respond(phone) {
+      margin-top: 22rem;
+      width: 100%;
+    }
+  }
+  &__name {
+    padding: 1.3rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: $color-primary;
+    // width: 100%;
+    margin-top: 2rem;
+    display: inline-block;
+    // text-overflow: ellipsis;
+    overflow-wrap: break-word;
+  }
+  &__description {
+    padding: 0.8rem;
+    display: inline-block;
+    color: $color-grey-dark-2;
+
+    // margin-left: 1.5rem;
+    font-size: 1.6rem;
+  }
+  &__card {
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-2rem);
+    }
+  }
+}
+
+.services__card-container {
+  margin: 9rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}

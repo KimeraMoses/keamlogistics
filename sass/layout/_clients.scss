@@ -1,0 +1,61 @@
+.clients {
+  position: relative;
+  padding-top: 1.8rem;
+  @include respond(tab-port) {
+    max-width: 900px;
+  }
+
+  &__heading {
+    margin-bottom: 10rem;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 30rem;
+    @include respond(tab-port) {
+      position: relative;
+      transform: none;
+      width: 40rem;
+      top: 0;
+      left: 0;
+      transform: translateX(28rem);
+    }
+    @include respond(phone) {
+      transform: translateX(12rem);
+    }
+  }
+  &__description {
+    display: inline-block;
+    font-size: 1.7rem;
+    // color: $color-grey-light-1;
+  }
+  &__description-container {
+    // position: absolute;
+    // top: 1%;
+    // left: 50%;
+    // transform: translate(-50%, 450%);
+    margin-top: 8rem;
+    margin-left: 2rem;
+
+    width: 98%;
+    @include respond(phone) {
+      width: 100%;
+      margin-left: 1rem;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+    grid-row-gap: 3rem;
+    padding: 4rem;
+  }
+  &__logo {
+    height: 5rem;
+    color: $color-grey-dark-1;
+    @include respond(phone) {
+      height: 2rem;
+      max-width: 3rem;
+    }
+  }
+}

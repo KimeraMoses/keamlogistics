@@ -1,0 +1,69 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+
+    font-size: 1.6rem;
+    display: inline-block;
+    text-decoration-style: none;
+    font-weight: 300;
+    width: 15rem;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  &--white {
+    background-color: $color-grey-light-2;
+    color: $color-grey-dark-2;
+    margin-left: 2rem;
+    animation: moveInUp 0.4s ease-in backwards 0.8s;
+  }
+  &--blue {
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    animation: moveInUp 0.4s ease-in backwards 0.4s;
+
+    // background-color: green;
+  }
+
+  &:active {
+    box-shadow: $shadow-dark;
+    transform: translateY(-10px) scale(0.9);
+  }
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: $shadow-light;
+  }
+}
+.btn__tab {
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin: 2rem;
+  width: 20rem;
+  color: $color-grey-light-1;
+  border-radius: 20rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include respond(tab-port) {
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+  &--active {
+
+    transform: translateY(-4px);
+  }
+  &--1 {
+    background-color: $color-primary;
+  }
+  &--2 {
+    background-color: #5ec576;
+  }
+  &--3 {
+    background-color: #ff585f;
+  }
+  // &:hover {
+  //   background-color: darken;
+  //   transform: translateY(-4px);
+  // }
+}
